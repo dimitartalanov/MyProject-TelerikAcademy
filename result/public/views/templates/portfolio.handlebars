@@ -1,0 +1,29 @@
+<div class="row text-left">
+  <div class="trail trail-portf" style="">
+    <a href="#/home">Home</a> >>
+    <a href="#/portfolio">Portfolio</a>
+  </div>
+</div>
+<div class="container-fluid color-mid portfolio-container">
+  <div class="row row-fixed triggered">
+
+    {{#items}}
+    <div class="cell" style="margin-bottom:12.8em">
+      <div class="href-img" style="background-image:url({{img}});">
+        <div class="p-icon-container">
+          <div class="p-icon"><a target="_blank" href="{{url}}"><img src="../../assets/images/more-icon.png"></a></div>
+          {{#if category}}
+          <div class="p-icon"><a target="_blank" href="{{url}}"><img src="../../assets/images/video-icon.png"></a></div>
+          {{else}}
+          <div class="p-icon"><a target="_blank" href="{{url}}"><img src="../../assets/images/zoom-icon.png"></a></div>
+          {{/if}}
+        </div>
+      </div>
+      <p style="margin-top:1em;height: 122%;
+    word-wrap: break-word;overflow: hidden;">
+        {{title}}
+      </p>
+    </div>
+    {{/items}}
+  </div>
+</div>

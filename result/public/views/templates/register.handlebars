@@ -1,0 +1,56 @@
+<div style="margin-top:1.5em">If dont have account
+  <div class="login-help">
+    <a href="#/login">Login Here</a>
+  </div>
+</div>
+<h1>Register to Your Account</h1><br>
+<div class="col-md-6 col-md-offset-3">
+  <form class="form-horizontal login" action="#/register" method="POST">
+    <div class="form-group">
+      <label for="inputEmail3" class="col-sm-2 control-label">Username</label>
+      <div class="col-sm-10">
+        <input type="username" name="username" autofocus placeholder="username" class="form-control" id="username">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" name="email" placeholder="email@mail.com" class="form-control" id="email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+      <div class="col-sm-10">
+        <input type="password" name="password" placeholder="your password" class="form-control" id="password">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-2 control-label">Profile Image</label>
+      <div class="col-sm-10">
+        <input type="text" name="photoURL" placeholder="your photo" class="form-control" id="photoURL">
+      </div>
+    </div>
+    <p>
+      <div class="warning" style="display:none">
+        <div class="alert alert-danger" role="alert">
+          <strong style="font-size:2rem">Oops...</strong>
+          <p id="danger-message-container" style="font-weight:600" ;></p>
+        </div>
+      </div>
+    </p>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label>
+          <input type="checkbox"> Remember me
+        </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button id="submit" class="btn btn-default btn-register">Register</button>
+      </div>
+    </div>
+  </form>
+</div>

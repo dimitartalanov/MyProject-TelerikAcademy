@@ -1,0 +1,19 @@
+{
+  "name": "lib",
+  "version": "1.0.0",
+  "description": "myProject-libs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mitaka",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "firebase": "^4.3.1",
+    "handlebars": "^4.0.10",
+    "sammy": "^0.7.6",
+    "systemjs": "^0.20.19",
+    "systemjs-plugin-babel": "0.0.25"
+  }
+}

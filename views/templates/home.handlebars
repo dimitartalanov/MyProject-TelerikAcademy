@@ -1,0 +1,68 @@
+<div class="container-fluid color-mid about-us">
+  <div class="row row-fixed triggered">
+    <div class="col-md-4 about-box">
+      <img src="../../assets/images/icon-3.png" alt="Who I Am" class="icon">
+      <h3 class="text-left">Who I Am</h3>
+      <div class="row text-left">
+        Arch Enemy is a Swedish melodic classic death metal and progressive band, originally a supergroup, from Halmstad, formed
+        in 1996. Its members were in bands such as Carcass, Armageddon, Carnage, Mercyful Fate, Spiritual Beggars, Nevermore,
+        and Eucharist.
+      </div>
+      <button class="btn btn-default btn-xs read-more" type="submit">Read More</button>
+    </div>
+    <div class="col-md-4 about-box">
+      <img src="../../assets/images/icon-2.png" alt="Who I Am" class="icon">
+      <h3 class="text-left">What I Do</h3>
+      <div class="row text-left">
+        Michael Amott comments, "This is quite overwhelming to be honest... Firstly, a huge THANK YOU to all the fans that picked
+        up 'Will to Power' during the first week of release! This has resulted in some of the best chart entries in Arch
+        Enemy's history!
+      </div>
+      <button class="btn btn-default btn-xs read-more" type="submit">Read More</button>
+    </div>
+    <div class="col-md-4 about-box">
+      <img src="../../assets/images/icon-1.png" alt="Who I Am" class="icon">
+      <h3 class="text-left">Mision Statement</h3>
+      <div class="row text-left">
+        The band has released ten studio albums, three live albums, three video albums and four EPs. Gossow left the band in March
+        2014 and was replaced by Canadian Alissa White-Gluz, while remaining as the group's manager. Years active 1996–present
+      </div>
+      <button class="btn btn-default btn-xs read-more" type="submit">Read More</button>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid color-light fasca">
+  <img src="../../assets/images/quote-icon.png" style="margin-top:-1.2em">
+  <!--  <span>NOVO</span> -->
+  <div class="container-fixed">
+    <div class="row row-fixed triggered" style="color: #343434;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5); font-family: 'Open Sans Condensed'">
+      <h3>And now, in 2017, Arch Enemy are ready to rise again and climb ever further up the ladder toward pure metal supremacy.
+        We've always loved </h3>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row row-fixed triggered">
+      <div class="col-md-2 col-md-offset-5 btn btn-default btn-lg additional-info" style="">Additional Info</div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid color-mid portfolio-container">
+  <div class="row row-fixed triggered">
+    {{#items}}
+    <div class="cell">
+      <div class="href-img" style="background-image:url({{img}});">
+        <div class="p-icon-container">
+          <div class="p-icon"><a target="_blank" href="{{url}}"><img src="../../assets/images/more-icon.png"></a></div>
+          {{#if category}}
+          <div class="p-icon"><a target="_blank" href="{{url}}"><img src="../../assets/images/video-icon.png"></a></div>
+          {{else}}
+          <div class="p-icon"><a target="_blank" href="{{url}}"><img src="../../assets/images/zoom-icon.png"></a></div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+    {{/items}}
+  </div>
+</div>

@@ -1,0 +1,169 @@
+ {{#items}}
+<div class="container-fluid color-mid">
+    <div class="row row-fixed triggered">
+        <div class="row text-left">
+            <div class="trail">
+                <a href="#/home">Home</a> >>
+                <a href="#/posts/1">Blog</a> >>
+                <a href="#/posts/post/{{id}}">{{title}}</a>
+            </div>
+        </div>
+        <div style="width:55%;margin-top:2em"><img style="width:100%;" src="../../assets/images/border.png"></div>
+        <div class="col-md-8 post current-post">
+            <div class="container-fluid">
+                <div class="row text-left posted-by">
+                    Posted by <span>{{userName}}</span> in
+                    <span>{{title}}</span>
+                </div>
+                <div class="row text-left">
+                    <div class="col-md-4 post-img">
+                        <img src="{{img}}" alt="">
+                    </div>
+                    <div class="col-md-8 body">
+                        {{content}}
+                    </div>
+                </div>
+            </div>
+            <!-- Post comments -->
+            <div class="container-fluid comments">
+                <h3>{{title}} Comments</h2>
+                    <div style="width:85%;"><img style="width:100%;" src="../../assets/images/border.png"></div>
+                    <div class="container-fluid comment">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="row">
+                                    <img src="{{imgUser}}" alt="" />
+                                </div>
+                                <div class="row" style="text-align: left;">
+                                    <span class="date">{{userName}}</span>
+                                </div>
+                            </div>
+                            <div class="col-md-10  baloon">
+                                <h4>{{userName}} says:</h4>
+                                <div class="container-fluid">
+                                    {{comment}}
+                                </div>
+                                <div class="container-fluid">
+                                    <button class="btn btn-default btn-xs pull-right read-more reply">Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid comment">
+                        <div class="row">
+                            <div class="col-md-2 reply-comment">
+                                <div class="row">
+                                    <img src="{{imgUser}}" alt="" />
+                                </div>
+                                <div class="row">
+                                    <span class="date">{{userName}}</span>
+                                </div>
+                            </div>
+                            <div class="col-md-8  baloon reply-comment">
+                                <h4>{{userName}} says-reply:</h4>
+                                <div class="container-fluid">
+                                    heavy , melodic, agressive and perfect
+                                </div>
+                                <div class="container-fluid">
+                                    <button class="btn btn-default btn-xs pull-right read-more reply">Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{#comments}}
+                    <div class="container-fluid comment">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="row">
+                                    {{#if imgUser}}
+                                    <img src="{{imgUser}}" alt="" /> {{else}}
+                                    <img src="https://www.lumineers.me/images/core/profile-image-zabadnesterling.gif" alt="" />{{/if}}
+                                </div>
+                                <div class="row" style="text-align: left;">
+
+                                    <span class="date">{{userName}}</span>
+                                </div>
+                            </div>
+                            <div class="col-md-10  baloon">
+                                <h4>{{userName}} says:</h4>
+                                <div class="container-fluid">
+                                    {{comment}}
+                                </div>
+                                <div class="container-fluid">
+                                    <button class="btn btn-default btn-xs pull-right read-more reply">Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/comments}}
+                    <div class="container-fluid">
+                        <h3 class="leave a comment">Leave a Comment</h3>
+                    </div>
+                    <div style="width:80%;"><img style="width:100%;" src="../../assets/images/border.png"></div>
+                    <div class="container-fluid comment">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="row">
+
+                                </div>
+                                <div class="row" style="text-align: left;">
+
+                                </div>
+                            </div>
+                            <div class="col-md-10  baloon">
+
+                                <h4>You says:</h4>
+
+                                <div class="form-group">
+                                    <div class="container-fluid textarea">
+                                        <textarea class="form-control inside" type="textarea" name="textarea"></textarea>
+                                        <input class="id" type="input" name="input" style="display:none" value="{{id}}">
+                                    </div>
+                                    <div class="container-fluid">
+                                        <button id="comment-user" class="btn btn-default btn-xs pull-right read-more reply" style="width: 7em !important;">Comment</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <!-- Recent things -->
+        <aside>
+            <div class="col-md-4 recent">
+                <div class="container-fluid posts text-left">
+                    <h4 class="text-left">Recent Posts</h4>
+                    <div class="container-fluid color-light field">
+                        <ul>
+
+                            <li><a href="#/posts/post/{{id}}">{{title}}</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="container-fluid comments text-left">
+                    <h4 class="text-left">Recent Comments</h4>
+                    <div class="container-fluid color-light field">
+                        <ul>
+
+                            <li><a href="#/posts/post/{{id}}">{{comment}}</a></li>
+                            {{#comments}}
+                            <li><a href="#/posts/post/{{id}}">{{comment}}</a></li>
+                            {{/comments}}
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="container-fluid comments text-left">
+                    <h4 class="text-left">About Me</h4>
+                    <div class="container-fluid color-light field">
+                        <ul>
+                            <li><a href="#/posts/post/{{id}}">{{userName}}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</div>
+{{/items}}
