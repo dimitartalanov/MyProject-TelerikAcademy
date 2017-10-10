@@ -32,11 +32,11 @@ gulp.task("copy", gulpsync.sync(["copy:html", "copy:templates", "copy:lib", "cop
 gulp.task("compile:js", () => {
   return gulp.src(["*/**/*.js", '!node_modules/**', '!*/node_modules/**', '!result/**'])
 
-    // .pipe(babel({
-    //   "presets": ['es2015'], //modules: false
-    //   // plugins: ['transform-runtime']
-    //   //    plugins: ["transform-runtime"]
-    // }))
+    .pipe(babel({
+      "presets": ['es2015'], //modules: false
+      // plugins: ['transform-runtime']
+      //    plugins: ["transform-runtime"]
+    }))
 
     .pipe(gulp.dest("result"));
 });
